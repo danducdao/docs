@@ -1,0 +1,136 @@
+-npm install --dev webpack-cli
+-tsc --target es5 filename.ts (Problem error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.)
+
+Instal firebase from angualr 5:
+npm install angularfire2
+npm install firebase@4.6.1
+
+-----------
+
+Control Panel\System and Security\Administrative Tools
+
+C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe
+
+nodemon :
+
+1) in package.json file : "scripts": {
+    "server": "nodemon server.js"
+  },
+
+2) npm run server
+
+-----------
+Filename too long in git for windows(problem)
+
+1)open git as admin 
+
+2) git config --system core.longpaths true
+
+-----------
+
+run vue.js :
+
+https://appdividend.com/2018/03/12/how-to-setup-vue-js-with-webpack-4-example/
+
+1) npm run dev
+
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run all tests
+npm test
+-------------
+
+run angular : 
+
+1) ng serve
+
+-------------
+run mongodb :
+
+1) npm run test
+
+------------
+run api :
+
+1) npm run server
+
+-------------
+
+//res.header("Access-Control-Allow-Origin", "*");
+//  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//  res.writeHead(200, {'Content-Type': 'application/json'});
+
+
+--------------
+
+https://stackoverflow.com/questions/35688084/how-get-query-params-from-url-in-angular2/37962626
+https://stackoverflow.com/questions/47455734/how-get-query-parameters-from-url-in-angular-5
+
+import { Component } from '@angular/core';
+import { ActivatedRoute }     from '@angular/router';
+
+@Component({
+  selector: 'my-home'
+})
+export class HomeComponent {
+
+  constructor(private sharedServices : SharedService,private route: ActivatedRoute) { 
+    route.queryParams.subscribe(
+      data => console.log('queryParams', data['test']));
+  }
+
+}
+
+---------------
+https://github.com/angular/angular-cli/issues/6082
+---------------
+
+/*
+     var content = fs.readFileSync("./public/city.list.json", "utf8");
+     content = content.toString().split('\n');
+     var villes = [];
+     for(var i = 0; i < content.length; i++) {
+          var json = JSON.parse(content[i]);
+          villes.push({
+                       id:json._id,
+                       ville:json.name,
+                       pays:json.country,
+                       coord:json.coord
+                     });
+                   console.log(villes)
+     }
+
+     res.send(villes);
+*/
+
+-------------------
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:4200',
+  credentials: true,
+  exposedHeaders: ['Content-Type'],
+}));
+
+---------------
+
+const multer  = require('multer');
+let upload = multer();
+
+----------------
+
+https://codecraft.tv/courses/angular/routing/nested-routes/
+
+https://codecraft.tv/courses/angular/routing/navigation/
